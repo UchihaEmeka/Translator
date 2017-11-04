@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffcbc2a6">
+
+    <TextView
+        android:id="@+id/HW"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#f3e3010a"
+        android:textSize="20dip"
+        android:paddingTop="6dip"/>
+    />
+
+
+    <TextView
+        android:id="@+id/MY"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingLeft="6dip"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:textColor="#ff395abe"/>
+
+    <TextView
+        android:id="@+id/FR"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingLeft="6dip"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:textColor="#ff395abe"/>
+
+    <TextView
+        android:id="@+id/SP"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingLeft="6dip"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:textColor="#ff395abe"/>
+
+    <TextView
+        android:id="@+id/IT"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingLeft="6dip"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:textColor="#ff395abe"/>
+
+</LinearLayout>

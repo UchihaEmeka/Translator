@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="isemin.com.menutranslator">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+
+    <supports-screens android:xlargeScreens="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/newg"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="isemin.com.menutranslator.MainActivity"
+            android:label="Menu Translator"></activity>
+
+        <activity android:name="isemin.com.menutranslator.ocr.camera.OCRActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:parentActivityName="isemin.com.menutranslator.MainActivity"
+            >
+            <meta-data
+                android:name="com.google.android.gms.vision.DEPENDENCIES"
+                android:value="ocr"/> />
+        </activity>
+
+        <activity
+            android:name="isemin.com.menutranslator.isemin.com.translator.MyTranslator"
+            android:label="Translator"
+            android:parentActivityName="isemin.com.menutranslator.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="isemin.com.menutranslator.MainActivity" />
+        </activity>
+        <activity
+            android:name="isemin.com.menutranslator.isemin.com.dictionary.Dictionary"
+            android:label="Dictionary"
+            android:parentActivityName="isemin.com.menutranslator.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="isemin.com.menutranslator.MainActivity" />
+        </activity>
+        <activity
+            android:name="isemin.com.menutranslator.isemin.com.phrases.AllPhrases"
+            android:label="Phrases"
+            android:parentActivityName="isemin.com.menutranslator.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="isemin.com.menutranslator.MainActivity" />
+        </activity>
+        <activity
+            android:name="isemin.com.menutranslator.isemin.com.phrases.Generalphrase"
+            android:label="General"
+            android:parentActivityName="isemin.com.menutranslator.isemin.com.phrases.AllPhrases">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="isemin.com.menutranslator.MainActivity" />
+        </activity>
+        <activity
+            android:name="isemin.com.menutranslator.isemin.com.phrases.Directionphrase"
+            android:label="Direction"
+            android:parentActivityName="isemin.com.menutranslator.isemin.com.phrases.AllPhrases">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="isemin.com.menutranslator.MainActivity" />
+        </activity>
+        <activity
+            android:name="isemin.com.menutranslator.isemin.com.phrases.Others"
+            android:label="Others"
+            android:parentActivityName="isemin.com.menutranslator.isemin.com.phrases.AllPhrases">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="isemin.com.menutranslator.MainActivity" />
+        </activity>
+        <activity
+            android:name="isemin.com.menutranslator.isemin.com.phrases.Restaurantphrase"
+            android:label="Restaurant"
+            android:parentActivityName="isemin.com.menutranslator.isemin.com.phrases.AllPhrases">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="isemin.com.menutranslator.MainActivity" />
+        </activity>
+        <activity
+            android:name="isemin.com.menutranslator.isemin.com.phrases.TimeAndDay"
+            android:label="Time and Day"
+            android:parentActivityName="isemin.com.menutranslator.isemin.com.phrases.AllPhrases">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="isemin.com.menutranslator.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="isemin.com.menutranslator.Launcher"
+            android:label="@string/title_activity_launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

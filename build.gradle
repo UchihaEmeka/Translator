@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+
+    defaultConfig {
+        applicationId "isemin.com.menutranslator"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    compile 'com.android.support:appcompat-v7:26.0.2'
+   // compile project(':tess-two')
+    compile 'com.rmtheis:tess-two:6.0.4'
+    compile 'com.theartofdev.edmodo:android-image-cropper:2.3.1'
+    compile ('io.github.firemaples:microsoft-translator-java-api:0.8.5')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+   // compile 'com.android.support:support-v7:26.0.2'
+   // compile 'com.android.support:design:26.0.2'
+    compile 'com.google.android.gms:play-services-vision:9.0.0+'
+    compile 'com.android.support:design:25.3.1'
+}
